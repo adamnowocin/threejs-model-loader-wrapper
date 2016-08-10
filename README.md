@@ -1,5 +1,5 @@
 # treejs-model-loader-wrapper
-> Simple wrapper of tree.js model loader
+> Simple wrapper for tree.js OBJ model loader
 
 ## Usage
 

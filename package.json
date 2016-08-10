@@ -2,7 +2,7 @@
   "name": "treejs-model-loader-wrapper",
   "main": "index.js",
   "version": "1.0.0",
-  "description": "Simple wrapper of treejs model loader",
+  "description": "Simple wrapper for tree.js OBJ model loader",
   "author": "Adam Nowocin <adam.nowocin@gmail.com>",
   "license": "MIT",
   "homepage": "https://github.com/adamnowocin/treejs-model-loader-wrapper",
