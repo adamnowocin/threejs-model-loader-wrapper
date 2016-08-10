@@ -20,7 +20,6 @@ define(['threejs', 'threejs/loaders/OBJLoader', 'threejs/loaders/MTLLoader', 'th
     }
 
     function loadModelWithTexture(options, modelSrc, textureSrc, materialSrc) {
-
       var manager = new three.LoadingManager();
 
       function loadModel(texture, materials) {
@@ -31,7 +30,6 @@ define(['threejs', 'threejs/loaders/OBJLoader', 'threejs/loaders/MTLLoader', 'th
         }
 
         loader.load(modelSrc, function (object) {
-
           object.traverse(function (child) {
             if (child instanceof three.Mesh) {
               child.material.map = textureSrc ? texture : child.material.map;
