@@ -1,0 +1,45 @@
+{
+  "name": "treejs-model-loader-wrapper",
+  "main": "index.js",
+  "version": "1.0.0",
+  "description": "Simple wrapper of treejs model loader",
+  "author": "Adam Nowocin <adam.nowocin@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/adamnowocin/treejs-model-loader-wrapper",
+  "bugs": {
+    "url": "https://github.com/adamnowocin/treejs-model-loader-wrapper/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adamnowocin/treejs-model-loader-wrapper.git"
+  },
+  "keywords": [
+    "treejs",
+    "model",
+    "loader"
+  ],
+  "dependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "registerbitbucket": "node ./node_modules/jspm/jspm.js config registries.bitbucket.baseurl ssh://git@bitbucket.org/ && node ./node_modules/jspm/jspm.js config registries.bitbucket.handler jspm-git && node ./node_modules/jspm/jspm.js config registries.bitbucket.timeouts.lookup 200",
+    "jspminstall": "node ./node_modules/jspm/jspm.js install",
+    "postinstall": "npm run registerbitbucket && npm run jspminstall"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.14.0",
+    "eslint": "^3.2.2",
+    "gulp": "^3.9.1",
+    "gulp-eslint": "^3.0.1",
+    "jspm": "^0.16.42",
+    "jspm-git": "^0.4.5"
+  },
+  "jspm": {
+    "configFile": "jspm.conf.js",
+    "dependencies": {
+      "threejs": "github:mrdoob/three.js@master"
+    },
+    "devDependencies": {
+      "typescript": "npm:typescript@^1.6.2"
+    }
+  }
+}

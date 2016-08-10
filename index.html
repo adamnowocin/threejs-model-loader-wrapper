@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        #main {
+            background: #000;
+            width: 800px;
+            height: 600px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: -300px 0 0 -400px;
+        }
+    </style>
+</head>
+
+<body>
+<div id="main"></div>
+<script src="jspm_packages/system.js"></script>
+<script src="jspm.conf.js"></script>
+<script>
+    System.import('./index').then(function (module) {
+        module.load3D(
+                document.getElementById('main'),
+                {
+                    cameraX: 100,
+                    cameraY: 100,
+                    cameraZ: 200,
+                    ambientLight: 0x555555,
+                    directionalLight: 0x888888,
+                    ambientLightStrength: 1,
+                    directionalLightStrength: 1.5,
+                },
+                [
+                    {
+                        options: {
+                            x: 50,
+                            y: 50,
+                            z: 0,
+                            scale: 50,
+                            rotateX: 0,
+                            rotateY: 45,
+                            rotateZ: 0
+                        },
+                        model: 'example/cube.obj',
+                        material: 'example/cube.mtl',
+                        texture: 'example/cube.jpg'
+                    },
+                    {
+                        options: {x: -50, scale: 30},
+                        model: 'example/cube.obj',
+                        texture: 'example/cube.jpg'
+                    }
+                ]);
+    });
+</script>
+</body>
+
+</html>
