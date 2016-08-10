@@ -5,7 +5,7 @@
 
 ```javascript
  <div id="main" style="width: 800px; height: 600px;"></div>
- <script src="../dist/index.js"></script>
+ <script src="dist/index.js"></script>
  <script>
      window.modelLoader.load3D(
              document.getElementById('main'),
@@ -29,14 +29,14 @@
                          rotateY: 45,
                          rotateZ: 0
                      },
-                     model: 'cube.obj',
-                     material: 'cube.mtl',
-                     texture: 'cube.jpg'
+                     model: 'example/cube.obj',
+                     material: 'example/cube.mtl',
+                     texture: 'example/cube.jpg'
                  },
                  {
                      options: {x: -50, scale: 30},
-                     model: 'cube.obj',
-                     texture: 'cube.jpg'
+                     model: 'example/cube.obj',
+                     texture: 'example/cube.jpg'
                  }
              ]
      );
