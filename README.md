@@ -1,16 +1,47 @@
 # treejs-model-loader-wrapper
 > Simple wrapper of tree.js model loader
 
-## Installation
-
-
-
 ## Usage
 
-### Basic
-
 ```javascript
-
+ <div id="main" style="width: 800px; height: 600px;"></div>
+ <script src="../dist/index.js"></script>
+ <script>
+     window.modelLoader.load3D(
+             document.getElementById('main'),
+             {
+                 cameraX: 100,
+                 cameraY: 100,
+                 cameraZ: 200,
+                 ambientLight: 0x555555,
+                 directionalLight: 0x888888,
+                 ambientLightStrength: 1,
+                 directionalLightStrength: 1.5,
+             },
+             [
+                 {
+                     options: {
+                         x: 50,
+                         y: 50,
+                         z: 0,
+                         scale: 50,
+                         rotateX: 0,
+                         rotateY: 45,
+                         rotateZ: 0
+                     },
+                     model: 'cube.obj',
+                     material: 'cube.mtl',
+                     texture: 'cube.jpg'
+                 },
+                 {
+                     options: {x: -50, scale: 30},
+                     model: 'cube.obj',
+                     texture: 'cube.jpg'
+                 }
+             ]
+     );
+ 
+ </script>
 ```
 
 ## License
