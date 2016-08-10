@@ -1,23 +1,25 @@
-/* global define, window, document, console, requestAnimationFrame */
+/* global define, window, requestAnimationFrame */
 
-define(
-  [
-    'threejs',
-    'threejs/loaders/OBJLoader',
-    'threejs/loaders/MTLLoader',
-    'threejs/controls/OrbitControls',
-    'threejs/renderers/Projector',
-    'threejs/renderers/CanvasRenderer'
-
-  ],
+define(['threejs', 'threejs/loaders/OBJLoader', 'threejs/loaders/MTLLoader', 'threejs/controls/OrbitControls',
+    'threejs/renderers/Projector', 'threejs/renderers/CanvasRenderer'],
   function (three) {
 
-    var camera, scene, renderer;
-    var directionalLight;
-
+    var camera, scene, renderer, directionalLight;
     window.THREE = three;
 
-    function loadModelWithTexture(scene, animate, options, modelSrc, textureSrc, materialSrc) {
+    function animate() {
+      requestAnimationFrame(animate);
+      render();
+    }
+
+    function render() {
+      directionalLight.position.x = camera.position.x;
+      directionalLight.position.y = camera.position.y;
+      directionalLight.position.z = camera.position.z;
+      renderer.render(scene, camera);
+    }
+
+    function loadModelWithTexture(options, modelSrc, textureSrc, materialSrc) {
 
       var manager = new three.LoadingManager();
 
@@ -35,7 +37,7 @@ define(
               if (textureSrc) {
                 child.material.map = texture;
               }
-              child.material.side = THREE.DoubleSide;
+              child.material.side = three.DoubleSide;
               child.geometry.computeFaceNormals();
               child.geometry.computeVertexNormals();
               child.scale.set(options.scale || 1, options.scale || 1, options.scale || 1);
@@ -67,7 +69,7 @@ define(
 
       // model
       if (materialSrc) {
-        var mtlLoader = new THREE.MTLLoader();
+        var mtlLoader = new three.MTLLoader();
         mtlLoader.load(materialSrc, function (materials) {
           materials.preload();
           loadModel(texture, materials);
@@ -78,7 +80,7 @@ define(
 
     }
 
-    function load3D(container, opt, modelsArray) {
+    window.load3D = function (container, opt, modelsArray) {
 
       var options = opt || {};
       var models = modelsArray || [];
@@ -94,24 +96,20 @@ define(
       var controls = new three.OrbitControls(camera, container);
       controls.addEventListener('change', render);
 
-      // scene
-
-      scene = new three.Scene();
-
+      // lights
       var ambient = new three.AmbientLight(options.ambientLight || 0x333333, options.ambientLightStrength || 1);
-      scene.add(ambient);
-
       directionalLight = new three.DirectionalLight(options.directionalLight || 0xAAAAAA, options.directionalLightStrength || 1.5);
       directionalLight.position.set(options.cameraX, options.cameraY, options.cameraZ).normalize();
-      scene.add(directionalLight);
 
+      // scene
+      scene = new three.Scene();
+      scene.add(ambient);
+      scene.add(directionalLight);
 
       // models
       for (var i in models) {
         if (models.hasOwnProperty(i)) {
           loadModelWithTexture(
-            scene,
-            animate,
             models[i].options,
             models[i].model,
             models[i].texture,
@@ -126,24 +124,8 @@ define(
       renderer.setSize(elementWidth, elementHeight);
       renderer.setClearColor(0x000000, 0);
       container.appendChild(renderer.domElement);
-    }
-
-    function animate() {
-      requestAnimationFrame(animate);
-      render();
-    }
-
-    function render() {
-      directionalLight.position.x = camera.position.x;
-      directionalLight.position.y = camera.position.y;
-      directionalLight.position.z = camera.position.z;
-      renderer.render(scene, camera);
-    }
-
-    window.modelLoader = {
-      load3D: load3D
     };
 
-    return window.modelLoader;
+    return window.load3D;
   }
 );

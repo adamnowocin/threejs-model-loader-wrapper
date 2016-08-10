@@ -20,8 +20,8 @@
 <script src="jspm_packages/system.js"></script>
 <script src="jspm.conf.js"></script>
 <script>
-    System.import('./index').then(function (module) {
-        module.load3D(
+    System.import('./index').then(function (load3d) {
+        load3d(
                 document.getElementById('main'),
                 {
                     cameraX: 100,

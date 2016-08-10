@@ -7,7 +7,7 @@
  <div id="main" style="width: 800px; height: 600px;"></div>
  <script src="dist/index.js"></script>
  <script>
-     window.modelLoader.load3D(
+     window.load3D(
              document.getElementById('main'),
              {
                  cameraX: 100,
