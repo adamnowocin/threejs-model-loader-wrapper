@@ -1,6 +1,7 @@
 # threejs-model-loader-wrapper
 
-![Travis](https://travis-ci.org/adamnowocin/threejs-model-loader-wrapper.svg?branch=master)
+[![Travis](https://travis-ci.org/adamnowocin/threejs-model-loader-wrapper.svg?branch=master)]()
+[![David](https://img.shields.io/david/dev/adamnowocin/threejs-model-loader-wrapper.svg?maxAge=2592000)]()
 
 > Simple wrapper for three.js OBJ model loader
 
