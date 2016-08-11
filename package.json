@@ -1,7 +1,7 @@
 {
   "name": "threejs-model-loader-wrapper",
   "main": "dist/index.js",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "format": "global",
   "description": "Simple wrapper for three.js OBJ model loader",
   "author": "Adam Nowocin <adam.nowocin@gmail.com>",
@@ -36,7 +36,7 @@
   "jspm": {
     "configFile": "jspm.conf.js",
     "dependencies": {
-      "threejs": "github:mrdoob/three.js@master"
+      "threejs": "npm:three@^0.79.0"
     },
     "devDependencies": {
       "typescript": "npm:typescript@^1.6.2"
