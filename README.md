@@ -1,4 +1,4 @@
-(https://travis-ci.org/adamnowocin/threejs-model-loader-wrapper.svg?branch=master)
+[(https://travis-ci.org/adamnowocin/threejs-model-loader-wrapper.svg?branch=master)]
 
 # threejs-model-loader-wrapper
 > Simple wrapper for three.js OBJ model loader
