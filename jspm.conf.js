@@ -8,7 +8,7 @@ System.config({
   },
 
   packages: {
-    "threejs": {
+    "three": {
       "map": {
         "./loaders/OBJLoader": "./examples/js/loaders/OBJLoader.js",
         "./loaders/MTLLoader": "./examples/js/loaders/MTLLoader.js",
@@ -19,35 +19,35 @@ System.config({
       "meta": {
         "examples/js/loaders/OBJLoader.js": {
           "globals": {
-            "THREE": "threejs"
+            "THREE": "three"
           },
           "exports": "THREE.OBJLoader",
           "format": "global"
         },
         "examples/js/loaders/MTLLoader.js": {
           "globals": {
-            "THREE": "threejs"
+            "THREE": "three"
           },
           "exports": "THREE.MTLLoader",
           "format": "global"
         },
         "examples/js/controls/OrbitControls.js": {
           "globals": {
-            "THREE": "threejs"
+            "THREE": "three"
           },
           "exports": "THREE.OrbitControls",
           "format": "global"
         },
         "examples/js/renderers/Projector.js": {
           "globals": {
-            "THREE": "threejs"
+            "THREE": "three"
           },
           "exports": "THREE.Projector",
           "format": "global"
         },
         "examples/js/renderers/CanvasRenderer.js": {
           "globals": {
-            "THREE": "threejs"
+            "THREE": "three"
           },
           "exports": "THREE.CanvasRenderer",
           "format": "global"
@@ -57,7 +57,7 @@ System.config({
   },
 
   map: {
-    "threejs": "npm:three@0.79.0",
+    "three": "npm:three@0.79.0",
     "typescript": "npm:typescript@1.8.10",
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.4.1"

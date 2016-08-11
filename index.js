@@ -1,7 +1,7 @@
 /* global define, window, requestAnimationFrame */
 
-define(['threejs', 'threejs/loaders/OBJLoader', 'threejs/loaders/MTLLoader', 'threejs/controls/OrbitControls',
-    'threejs/renderers/Projector', 'threejs/renderers/CanvasRenderer'],
+define(['three', 'three/loaders/OBJLoader', 'three/loaders/MTLLoader', 'three/controls/OrbitControls',
+    'three/renderers/Projector', 'three/renderers/CanvasRenderer'],
   function (three) {
 
     var camera, scene, renderer, directionalLight;
