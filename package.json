@@ -22,9 +22,8 @@
   "dependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "registerbitbucket": "node ./node_modules/jspm/jspm.js config registries.bitbucket.baseurl ssh://git@bitbucket.org/ && node ./node_modules/jspm/jspm.js config registries.bitbucket.handler jspm-git && node ./node_modules/jspm/jspm.js config registries.bitbucket.timeouts.lookup 200",
     "jspminstall": "node ./node_modules/jspm/jspm.js install",
-    "postinstall": "npm run registerbitbucket && npm run jspminstall"
+    "postinstall": "npm run jspminstall"
   },
   "devDependencies": {
     "browser-sync": "^2.14.0",
