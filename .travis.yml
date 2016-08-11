@@ -3,6 +3,8 @@ node_js:
   - "node"
 before_install:
   - npm install -g gulp
+  - npm install -g jspm
+  - jspm config registries.github.auth $JSPM_GITHUB_AUTH_TOKEN
 install:
   - npm install
 script:
