@@ -1,5 +1,5 @@
-# treejs-model-loader-wrapper
-> Simple wrapper for tree.js OBJ model loader
+# threejs-model-loader-wrapper
+> Simple wrapper for three.js OBJ model loader
 
 ## Usage
 
@@ -46,5 +46,5 @@
 
 ## License
 
-**treejs-model-loader-wrapper** is licensed under the [MIT license](http://opensource.org/licenses/MIT).
+**threejs-model-loader-wrapper** is licensed under the [MIT license](http://opensource.org/licenses/MIT).
 For the full license, see the `LICENSE` file.
