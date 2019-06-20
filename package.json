@@ -21,25 +21,28 @@
   ],
   "dependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp serve",
+    "build": "gulp build:js",
+    "test": "gulp check",
     "jspminstall": "node ./node_modules/jspm/jspm.js install",
     "postinstall": "npm run jspminstall"
   },
   "devDependencies": {
-    "browser-sync": "^2.14.0",
-    "eslint": "^3.2.2",
-    "gulp": "^3.9.1",
-    "gulp-eslint": "^3.0.1",
-    "jspm": "^0.16.42",
-    "jspm-git": "^0.4.5"
+    "browser-sync": "^2.26.7",
+    "eslint": "^5.16.0",
+    "gulp": "^4.0.2",
+    "gulp-eslint": "^5.0.0",
+    "jspm": "^0.16.54",
+    "jspm-git": "^0.6.1"
   },
   "jspm": {
     "configFile": "jspm.conf.js",
     "dependencies": {
-      "three": "npm:three@^0.79.0"
+      "three": "npm:three@^0.105.2"
     },
     "devDependencies": {
-      "typescript": "npm:typescript@^1.6.2"
+      "typescript": "npm:typescript@^3.5.2"
     }
-  }
+  },
+  "type": "module"
 }
