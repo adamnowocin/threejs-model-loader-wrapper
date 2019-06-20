@@ -1,8 +1,6 @@
 language: node_js
 node_js:
   - "node"
-before_install:
-  - jspm config registries.github.auth $JSPM_GITHUB_AUTH_TOKEN
 install:
   - npm install
 script:
