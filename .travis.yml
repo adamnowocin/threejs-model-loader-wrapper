@@ -3,7 +3,7 @@ node_js:
   - "node"
 before_install:
   - npm install -g jspm
-  - jspm config registries.github.auth $JSPM_GITHUB_AUTH_TOKEN
+  - jspm config registries.github.auth $JSPM_GITHUB_AUTH_TOKEN_NEW
 install:
   - npm install
 script:
