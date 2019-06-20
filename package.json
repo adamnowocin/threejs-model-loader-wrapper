@@ -1,7 +1,7 @@
 {
   "name": "threejs-model-loader-wrapper",
   "main": "dist/index.js",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "format": "global",
   "description": "Simple wrapper for three.js OBJ model loader",
   "author": "Adam Nowocin <adam.nowocin@gmail.com>",
