@@ -28,7 +28,7 @@
     "postinstall": "npm run jspminstall"
   },
   "devDependencies": {
-    "browser-sync": "^2.26.7",
+    "browser-sync": "^3.0.2",
     "eslint": "^5.16.0",
     "gulp": "^4.0.2",
     "gulp-eslint": "^5.0.0",
